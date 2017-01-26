@@ -10,4 +10,4 @@ Password: 123456
 
 Check Project Summary.xlsx for requirement and implementations.
 
-Check ProjectLevel0.dov for requirement to do.
+Check ProjectLevel0.doc for requirement to do.
