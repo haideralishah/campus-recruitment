@@ -1,0 +1,30 @@
+<div class="container">
+  <h2>Students Data</h2>
+  <!--<p>The .table-bordered class adds borders to a table:</p>-->
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Education</th>
+        <th>GPA</th>
+        <th>Skills</th>
+        <th>Date of Birth</th>
+        <th colspan="2" class="center-text">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let c of userData; let num = index">
+        <td>{{c.firstName}}</td>
+        <td>{{c.lastName}}</td>
+        <td>{{c.education}}</td>
+        <td>{{c.gpa}}</td>
+        <td>{{c.skills}}</td>
+        <td>{{c.dob}}</td>
+        <td (click)='deletePost(c)' class="delete">Delete Post</td>
+        <td (click)='deleteAccountPost(c)' class="delete">Delete Account</td>
+
+      </tr>
+    </tbody>
+  </table>
+</div>

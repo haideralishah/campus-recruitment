@@ -1,0 +1,12 @@
+.delete{
+    color: red;
+
+}
+.delete:hover{
+    color: #aa1212;
+    cursor: pointer;
+}
+
+.center-text{
+    text-align: center;
+}

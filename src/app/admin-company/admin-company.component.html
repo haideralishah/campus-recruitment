@@ -1,0 +1,30 @@
+<div class="container">
+  <h2>Job Posts</h2>
+  <!--<p>The .table-bordered class adds borders to a table:</p>-->
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>Company Name</th>
+        <th>Job Title</th>
+        <th>Job Description</th>
+        <th>Requirements</th>
+        <th>Skills</th>
+        <th>Salary</th>
+        <th colspan="2" class="center-text">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let c of vecanciesData; let num = index">
+        <td *ngIf='availableUsers.indexOf(c.companyUid) != -1'>{{c.companyName}}</td>
+
+        <td *ngIf='availableUsers.indexOf(c.companyUid) != -1'>{{c.jobTitle}}</td>
+        <td *ngIf='availableUsers.indexOf(c.companyUid) != -1'>{{c.jd}}</td>
+        <td *ngIf='availableUsers.indexOf(c.companyUid) != -1'>{{c.requirement}}</td>
+        <td *ngIf='availableUsers.indexOf(c.companyUid) != -1'>{{c.skills}}</td>
+        <td *ngIf='availableUsers.indexOf(c.companyUid) != -1'>{{c.salary}}</td>
+        <td *ngIf='availableUsers.indexOf(c.companyUid) != -1' (click)='deletePost(c)' class="delete">Delete Post</td>
+        <td *ngIf='availableUsers.indexOf(c.companyUid) != -1' (click)='deleteAccountPost(c)' class="delete">Delete Account</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
